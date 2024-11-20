@@ -16,6 +16,7 @@ import com.example.wirelessutilization.presentation.screen.BluetoothScreen
 import com.example.wirelessutilization.presentation.screen.FingerprintSensorScreen
 import com.example.wirelessutilization.presentation.screen.LightSensorScreen
 import com.example.wirelessutilization.presentation.screen.MainSelectionScreen
+import com.example.wirelessutilization.presentation.screen.MicScreen
 import com.example.wirelessutilization.presentation.screen.NFCScreen
 import com.example.wirelessutilization.presentation.screen.WiFiScreen
 import com.example.wirelessutilization.presentation.theme.WirelessUtilizationTheme
@@ -40,6 +41,9 @@ sealed class Destination {
 
     @Serializable
     data object LightSensor: Destination()
+
+    @Serializable
+    data object Mic: Destination()
 }
 
 val LocalNavController = staticCompositionLocalOf<NavController> { error("Not Provided") }
@@ -70,6 +74,9 @@ class MainActivity : FragmentActivity() {
                         }
                         composable<Destination.LightSensor> {
                             LightSensorScreen(modifier = Modifier.fillMaxSize())
+                        }
+                        composable<Destination.Mic> {
+                            MicScreen(modifier = Modifier.fillMaxSize())
                         }
                     }
                 }

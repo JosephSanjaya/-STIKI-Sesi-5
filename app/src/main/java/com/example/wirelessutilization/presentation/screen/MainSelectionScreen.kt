@@ -90,6 +90,13 @@ fun MainSelectionScreen(modifier: Modifier = Modifier) {
                 icon = Icons.Filled.Info,
                 onClick = { navController.navigate(Destination.LightSensor) }
             )
+
+            MenuCard(
+                title = "Microphone Utilization",
+                description = "Utilize the microphone to record audio and voice data.",
+                icon = Icons.Filled.Info,
+                onClick = { navController.navigate(Destination.Mic) }
+            )
         }
     }
 }

@@ -10,6 +10,7 @@ lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.11.00"
 compose_nav = "2.8.4"
+fragment = "1.8.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,6 +31,11 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 compose-nav = { module = "androidx.navigation:navigation-compose", version.ref = "compose_nav" }
 kotlin-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin-serialization" }
 biometrics = { module="androidx.biometric:biometric-ktx", version = "1.4.0-alpha02" }
+fragment = { module="androidx.fragment:fragment-ktx", version.ref = "fragment" }
+fragment-compose = { module="androidx.fragment:fragment-compose", version.ref = "fragment" }
+
+[bundles]
+fragment = ["fragment", "fragment-compose"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
