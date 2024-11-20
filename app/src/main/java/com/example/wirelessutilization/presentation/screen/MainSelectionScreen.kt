@@ -83,6 +83,13 @@ fun MainSelectionScreen(modifier: Modifier = Modifier) {
                 icon = Icons.Filled.Info,
                 onClick = { navController.navigate(Destination.Fingerprint) }
             )
+
+            MenuCard(
+                title = "Light Sensor Utilization",
+                description = "Utilize the light sensor to detect ambient light levels.",
+                icon = Icons.Filled.Info,
+                onClick = { navController.navigate(Destination.LightSensor) }
+            )
         }
     }
 }

@@ -14,6 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.wirelessutilization.presentation.screen.BluetoothScreen
 import com.example.wirelessutilization.presentation.screen.FingerprintSensorScreen
+import com.example.wirelessutilization.presentation.screen.LightSensorScreen
 import com.example.wirelessutilization.presentation.screen.MainSelectionScreen
 import com.example.wirelessutilization.presentation.screen.NFCScreen
 import com.example.wirelessutilization.presentation.screen.WiFiScreen
@@ -36,6 +37,9 @@ sealed class Destination {
 
     @Serializable
     data object Fingerprint: Destination()
+
+    @Serializable
+    data object LightSensor: Destination()
 }
 
 val LocalNavController = staticCompositionLocalOf<NavController> { error("Not Provided") }
@@ -63,6 +67,9 @@ class MainActivity : FragmentActivity() {
                         }
                         composable<Destination.Fingerprint> {
                             FingerprintSensorScreen(modifier = Modifier.fillMaxSize())
+                        }
+                        composable<Destination.LightSensor> {
+                            LightSensorScreen(modifier = Modifier.fillMaxSize())
                         }
                     }
                 }
