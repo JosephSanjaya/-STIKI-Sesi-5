@@ -97,6 +97,20 @@ fun MainSelectionScreen(modifier: Modifier = Modifier) {
                 icon = Icons.Filled.Info,
                 onClick = { navController.navigate(Destination.Mic) }
             )
+
+            MenuCard(
+                title = "TTS Utilization",
+                description = "Text-to-speech technology for accessibility and communication.",
+                icon = Icons.Filled.Info,
+                onClick = { navController.navigate(Destination.TTS) }
+            )
+
+            MenuCard(
+                title = "STT Utilization",
+                description = "Speech-to-text technology for voice recognition and input.",
+                icon = Icons.Filled.Info,
+                onClick = { navController.navigate(Destination.STT) }
+            )
         }
     }
 }

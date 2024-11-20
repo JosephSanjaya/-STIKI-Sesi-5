@@ -33,6 +33,7 @@ kotlin-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serial
 biometrics = { module="androidx.biometric:biometric-ktx", version = "1.4.0-alpha02" }
 fragment = { module="androidx.fragment:fragment-ktx", version.ref = "fragment" }
 fragment-compose = { module="androidx.fragment:fragment-compose", version.ref = "fragment" }
+tts = { module="com.google.cloud:google-cloud-texttospeech", version = "2.55.0" }
 
 [bundles]
 fragment = ["fragment", "fragment-compose"]

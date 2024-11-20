@@ -1,5 +1,6 @@
 package com.example.wirelessutilization.presentation
 
+import SpeechToTextScreen
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +19,7 @@ import com.example.wirelessutilization.presentation.screen.LightSensorScreen
 import com.example.wirelessutilization.presentation.screen.MainSelectionScreen
 import com.example.wirelessutilization.presentation.screen.MicScreen
 import com.example.wirelessutilization.presentation.screen.NFCScreen
+import com.example.wirelessutilization.presentation.screen.TextToSpeechScreen
 import com.example.wirelessutilization.presentation.screen.WiFiScreen
 import com.example.wirelessutilization.presentation.theme.WirelessUtilizationTheme
 import kotlinx.serialization.Serializable
@@ -44,6 +46,12 @@ sealed class Destination {
 
     @Serializable
     data object Mic: Destination()
+
+    @Serializable
+    data object TTS: Destination()
+
+    @Serializable
+    data object STT: Destination()
 }
 
 val LocalNavController = staticCompositionLocalOf<NavController> { error("Not Provided") }
@@ -77,6 +85,12 @@ class MainActivity : FragmentActivity() {
                         }
                         composable<Destination.Mic> {
                             MicScreen(modifier = Modifier.fillMaxSize())
+                        }
+                        composable<Destination.TTS> {
+                            TextToSpeechScreen(modifier = Modifier.fillMaxSize())
+                        }
+                        composable<Destination.STT> {
+                            SpeechToTextScreen(modifier = Modifier.fillMaxSize())
                         }
                     }
                 }

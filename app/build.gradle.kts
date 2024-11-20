@@ -38,6 +38,11 @@ android {
     buildFeatures {
         compose = true
     }
+
+    packagingOptions {
+        exclude("META-INF/INDEX.LIST")
+        exclude("META-INF/DEPENDENCIES")
+    }
 }
 
 dependencies {
@@ -53,6 +58,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.tts)
     testImplementation(libs.junit)
     implementation(libs.bundles.fragment)
     androidTestImplementation(libs.androidx.junit)
