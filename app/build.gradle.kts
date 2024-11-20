@@ -42,6 +42,7 @@ android {
 
 dependencies {
     implementation(libs.kotlin.serialization)
+    implementation(libs.biometrics)
     implementation(libs.viewmodel.compose)
     implementation(libs.compose.nav)
     implementation(libs.androidx.core.ktx)

@@ -29,6 +29,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 compose-nav = { module = "androidx.navigation:navigation-compose", version.ref = "compose_nav" }
 kotlin-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin-serialization" }
+biometrics = { module="androidx.biometric:biometric-ktx", version = "1.4.0-alpha02" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
